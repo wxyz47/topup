@@ -1,0 +1,285 @@
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+/* HEADER */
+header {
+  background: #1a1a1a;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.logo span {
+  color: #00d8ff;
+}
+
+/* NAVIGATION */
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00d8ff;
+}
+
+/* MENU TOGGLE (MOBILE) */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* HERO */
+.hero {
+  background: url('https://images.unsplash.com/photo-1617551340919-13e8e458ee32') no-repeat center center/cover;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-text {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background: #00d8ff;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: #00a3cc;
+}
+
+.btn.small {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+/* SECTION */
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #00d8ff;
+}
+
+/* GAME GRID */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.game-card {
+  background: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  padding-bottom: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 216, 255, 0.3);
+}
+
+.game-card h4 {
+  margin: 1rem 0 0.5rem;
+}
+
+.game-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+/* TESTIMONI */
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.testi-card {
+  background: #1e1e1e;
+  border-left: 4px solid #00d8ff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: left;
+}
+
+/* FAQ - Accordion */
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.accordion-item {
+  margin-bottom: 1rem;
+}
+
+.accordion-header {
+  background: #1e1e1e;
+  padding: 1rem;
+  width: 100%;
+  font-weight: bold;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.3s;
+  border-radius: 8px;
+}
+
+.accordion-header:hover {
+  background: #2c2c2c;
+}
+
+.accordion-body {
+  background: #2a2a2a;
+  padding: 1rem;
+  display: none;
+  border-radius: 0 0 8px 8px;
+}
+
+/* FOOTER */
+footer {
+  background: #101010;
+  padding: 2rem;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-content h4 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.footer-content a {
+  color: #00d8ff;
+  font-weight: 600;
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 1rem;
+  color: #666;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: #1a1a1a;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+}
