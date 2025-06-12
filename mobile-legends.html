@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top Up Mobile Legends</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <i class="fas fa-gamepad"></i>
+          <span>GameTopUp</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html#home">Beranda</a></li>
+          <li><a href="index.html#games">Game</a></li>
+          <li><a href="index.html#reviews">Review</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#contact">Kontak</a></li>
+        </ul>
+        <div class="nav-toggle"><span></span><span></span><span></span></div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">Top Up Mobile Legends</h1>
+        <p class="hero-subtitle">Isi Diamond ML kamu dengan harga termurah dan proses tercepat hanya di GameTopUp.</p>
+      </div>
+      <div class="hero-image">
+        <img src="https://placehold.co/600x400/000000/ffffff/png?text=Mobile+Legends" alt="Mobile Legends" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="games-section">
+    <div class="container">
+      <h2 class="section-title">Formulir Top Up</h2>
+      <form class="newsletter-form" style="flex-direction: column;">
+        <input type="text" placeholder="ID Game (Contoh: 123456789)" required />
+        <input type="text" placeholder="Server ID (Contoh: 1234)" required />
+        <input type="text" placeholder="Nickname (Opsional)" />
+        <input type="email" placeholder="Email Aktif" required />
+        <input type="tel" placeholder="Nomor WhatsApp Aktif" required />
+        
+        <label style="color:white; margin-top:15px;">Pilih Jumlah Diamond:</label>
+        <select required style="padding:12px; border-radius:10px; margin-top:5px;">
+          <option value="">-- Pilih Jumlah Diamond --</option>
+          <option value="11">11 Diamond - Rp 3.500</option>
+          <option value="28">28 Diamond - Rp 7.000</option>
+          <option value="56">56 Diamond - Rp 13.000</option>
+          <option value="85">85 Diamond - Rp 19.000</option>
+          <option value="170">170 Diamond - Rp 38.000</option>
+          <option value="284">284 Diamond - Rp 63.000</option>
+        </select>
+
+        <label style="color:white; margin-top:15px;">Pilih Metode Pembayaran:</label>
+        <select required style="padding:12px; border-radius:10px; margin-top:5px;">
+          <option value="">-- Pilih Pembayaran --</option>
+          <option value="qris">QRIS (OVO, DANA, GoPay)</option>
+          <option value="bank">Transfer Bank</option>
+          <option value="pulsa">Pulsa (Telkomsel/XL)</option>
+        </select>
+
+        <button type="submit" class="btn btn-primary btn-large" style="margin-top: 20px;">Beli Sekarang</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <i class="fas fa-gamepad"></i>
+            <span>GameTopUp</span>
+          </div>
+          <p>Platform top up game terpercaya di Indonesia. Melayani jutaan gamer sejak 2020.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Layanan</h4>
+          <ul>
+            <li><a href="#">Top Up Game</a></li>
+            <li><a href="#">Voucher Game</a></li>
+            <li><a href="#">Gift Card</a></li>
+            <li><a href="#">Pulsa & Data</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Bantuan</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Cara Top Up</a></li>
+            <li><a href="#">Hubungi Kami</a></li>
+            <li><a href="#">Syarat & Ketentuan</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Kontak</h4>
+          <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> support@gametopup.com</p>
+            <p><i class="fas fa-phone"></i> +62 812-3456-7890</p>
+            <p><i class="fas fa-clock"></i> 24/7 Customer Support</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 GameTopUp. All rights reserved.</p>
+        <div class="payment-methods">
+          <span>Metode Pembayaran:</span>
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fas fa-mobile-alt"></i>
+          <i class="fas fa-university"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
