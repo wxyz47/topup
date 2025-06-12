@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TopUpPro - Top Up Game Online</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="container header-container">
+      <h1 class="logo">TopUp<span>Pro</span></h1>
+      <nav id="navbar">
+        <a href="#home">Beranda</a>
+        <a href="#games">Game</a>
+        <a href="#testi">Testimoni</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h2>Top Up Game Cepat, Aman & Termurah!</h2>
+      <p>Layanan top up terpercaya dengan berbagai pilihan game populer.</p>
+      <a href="#games" class="btn">Top Up Sekarang</a>
+    </div>
+  </section>
+
+  <section id="games" class="section">
+    <h3 class="section-title">Game Populer</h3>
+    <div class="game-grid">
+      <div class="game-card">
+        <img src="https://via.placeholder.com/300x160?text=Mobile+Legends" alt="MLBB">
+        <h4>Mobile Legends</h4>
+        <p>Diamond cepat masuk tanpa login!</p>
+        <a href="#" class="btn small">Top Up</a>
+      </div>
+      <div class="game-card">
+        <img src="https://via.placeholder.com/300x160?text=Free+Fire" alt="Free Fire">
+        <h4>Free Fire</h4>
+        <p>Garansi transaksi sukses 100%.</p>
+        <a href="#" class="btn small">Top Up</a>
+      </div>
+      <div class="game-card">
+        <img src="https://via.placeholder.com/300x160?text=PUBG+Mobile" alt="PUBG">
+        <h4>PUBG Mobile</h4>
+        <p>Langsung masuk ke akun kamu!</p>
+        <a href="#" class="btn small">Top Up</a>
+      </div>
+      <div class="game-card">
+        <img src="https://via.placeholder.com/300x160?text=Genshin+Impact" alt="Genshin">
+        <h4>Genshin Impact</h4>
+        <p>Crystals & Genesis langsung terkirim.</p>
+        <a href="#" class="btn small">Top Up</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="testi" class="section testi">
+    <h3 class="section-title">Apa Kata Mereka</h3>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p>"TopUpPro selalu cepat dan responsif! Top up ML cuma butuh 1 menit."</p>
+        <strong>- Budi, Surabaya</strong>
+      </div>
+      <div class="testi-card">
+        <p>"Favorit banget buat top up FF. Harganya paling murah dan proses lancar."</p>
+        <strong>- Ayu, Jakarta</strong>
+      </div>
+      <div class="testi-card">
+        <p>"Suka banget fitur user friendly-nya. UI-nya juga keren banget."</p>
+        <strong>- Dimas, Bandung</strong>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section faq">
+    <h3 class="section-title">Pertanyaan Umum</h3>
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-header">Apakah proses top up instan?</button>
+        <div class="accordion-body">Ya! Sebagian besar top up masuk dalam hitungan detik hingga 2 menit.</div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Apakah aman?</button>
+        <div class="accordion-body">Kami menggunakan gateway pembayaran resmi dan tidak menyimpan data pribadi.</div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Metode pembayaran apa saja?</button>
+        <div class="accordion-body">Kami menerima QRIS, E-wallet (DANA, OVO), dan transfer bank.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="footer-content">
+      <div>
+        <h4>Tentang Kami</h4>
+        <p>TopUpPro adalah platform top up game terpercaya di Indonesia sejak 2020.</p>
+      </div>
+      <div>
+        <h4>Hubungi Kami</h4>
+        <p>Email: support@topuppro.id<br>WA: 0812-3456-7890</p>
+      </div>
+      <div>
+        <h4>Ikuti Kami</h4>
+        <p>
+          <a href="#">Instagram</a> |
+          <a href="#">Facebook</a> |
+          <a href="#">YouTube</a>
+        </p>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; 2025 TopUpPro. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('menu-toggle').onclick = function() {
+      document.getElementById('navbar').classList.toggle('active');
+    };
+
+    const accordions = document.querySelectorAll(".accordion-header");
+    accordions.forEach(header => {
+      header.onclick = () => {
+        header.classList.toggle("open");
+        const body = header.nextElementSibling;
+        body.style.display = body.style.display === "block" ? "none" : "block";
+      };
+    });
+  </script>
+
+</body>
+</html>
