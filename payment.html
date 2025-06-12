@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pembayaran QRIS - GameTopUp</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    .pembayaran-box {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+    }
+    .order-info {
+      text-align: left;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+    .order-info p {
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+    .order-info strong {
+      color: #fff;
+    }
+    .qr-image {
+      background: #fff;
+      display: inline-block;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .instruction {
+      text-align: left;
+      margin-top: 30px;
+      color: #ccc;
+    }
+    .countdown {
+      font-size: 1.2rem;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #ff6b35;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <i class="fas fa-gamepad"></i>
+        <span>GameTopUp</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html#home">Beranda</a></li>
+        <li><a href="index.html#games">Game</a></li>
+        <li><a href="index.html#reviews">Review</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#contact">Kontak</a></li>
+      </ul>
+      <div class="nav-toggle"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+</header>
+
+<!-- Pembayaran Section -->
+<section class="games-section" style="padding-top: 120px;">
+  <div class="container">
+    <h2 class="section-title">Selesaikan Pembayaran</h2>
+    <div class="pembayaran-box">
+      <h3 style="color: #fff; margin-bottom: 10px;">Mobile Legends - 56 Diamond</h3>
+      <p class="countdown" id="timer">Sisa waktu pembayaran: 14:59</p>
+
+      <div class="order-info">
+        <p><strong>Harga:</strong> Rp 13.000</p>
+        <p><strong>ID Game:</strong> 123456789 (1234)</p>
+        <p><strong>Email:</strong> user@example.com</p>
+        <p><strong>Nomor HP:</strong> 0812-xxxx-xxxx</p>
+        <p><strong>Metode Pembayaran:</strong> QRIS</p>
+      </div>
+
+      <div class="qr-image">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://example.com/qris" alt="QRIS" />
+      </div>
+
+      <div class="instruction">
+        <h4 style="color:#fff; margin-top:30px;">Langkah Pembayaran:</h4>
+        <ol style="margin-top:10px;">
+          <li>Buka aplikasi pembayaran (OVO, DANA, GoPay, ShopeePay, atau Mobile Banking)</li>
+          <li>Pilih menu *Scan QR*</li>
+          <li>Arahkan kamera ke QR di atas</li>
+          <li>Pastikan nominal yang ditampilkan adalah <strong>Rp 13.000</strong></li>
+          <li>Konfirmasi dan selesaikan pembayaran</li>
+        </ol>
+      </div>
+
+      <button class="btn btn-primary btn-large" style="margin-top:30px;" onclick="alert('Silakan tunggu, pembayaran Anda sedang diverifikasi.')">Saya Sudah Bayar</button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <i class="fas fa-gamepad"></i>
+          <span>GameTopUp</span>
+        </div>
+        <p>Platform top up game terpercaya di Indonesia. Melayani jutaan gamer sejak 2020.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>Layanan</h4>
+        <ul>
+          <li><a href="#">Top Up Game</a></li>
+          <li><a href="#">Voucher Game</a></li>
+          <li><a href="#">Gift Card</a></li>
+          <li><a href="#">Pulsa & Data</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Bantuan</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Cara Top Up</a></li>
+          <li><a href="#">Hubungi Kami</a></li>
+          <li><a href="#">Syarat & Ketentuan</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Kontak</h4>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> support@gametopup.com</p>
+          <p><i class="fas fa-phone"></i> +62 812-3456-7890</p>
+          <p><i class="fas fa-clock"></i> 24/7 Customer Support</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 GameTopUp. All rights reserved.</p>
+      <div class="payment-methods">
+        <span>Metode Pembayaran:</span>
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fas fa-mobile-alt"></i>
+        <i class="fas fa-university"></i>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Countdown Script -->
+<script>
+  let duration = 15 * 60; // 15 minutes
+  const display = document.getElementById('timer');
+
+  const countdown = setInterval(() => {
+    const minutes = Math.floor(duration / 60);
+    const seconds = duration % 60;
+    display.textContent = `Sisa waktu pembayaran: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    if (--duration < 0) {
+      clearInterval(countdown);
+      display.textContent = 'Waktu pembayaran telah habis!';
+    }
+  }, 1000);
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
