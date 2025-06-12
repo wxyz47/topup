@@ -3,136 +3,254 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TopUpPro - Top Up Game Online</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="description" content="TopUpPro - Situs top up game tercepat & termurah se-Indonesia.">
+  <title>TopUpPro | Top Up Game Murah & Cepat</title>
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <header>
-    <div class="container header-container">
-      <h1 class="logo">TopUp<span>Pro</span></h1>
-      <nav id="navbar">
-        <a href="#home">Beranda</a>
-        <a href="#games">Game</a>
-        <a href="#testi">Testimoni</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Kontak</a>
-      </nav>
-      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container">
+    <div class="logo">TopUp<span>Pro</span></div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Beranda</a>
+      <a href="#games">Game</a>
+      <a href="#kategori">Kategori</a>
+      <a href="#review">Review</a>
+      <a href="#faq">FAQ</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <div class="menu-toggle" id="menuToggle">&#9776;</div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Top Up Game Favoritmu <span>Tanpa Ribet</span></h1>
+    <p>Transaksi cepat, harga hemat, dan support 24/7.</p>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Cari game...">
+      <button onclick="searchGame()">Cari</button>
     </div>
-  </header>
+  </div>
+</section>
 
-  <section id="home" class="hero">
-    <div class="hero-text">
-      <h2>Top Up Game Cepat, Aman & Termurah!</h2>
-      <p>Layanan top up terpercaya dengan berbagai pilihan game populer.</p>
-      <a href="#games" class="btn">Top Up Sekarang</a>
+<!-- KATEGORI -->
+<section id="kategori" class="kategori-section">
+  <h2>Kategori Game</h2>
+  <div class="kategori-container">
+    <button class="kategori-btn active" data-kategori="all">Semua</button>
+    <button class="kategori-btn" data-kategori="moba">MOBA</button>
+    <button class="kategori-btn" data-kategori="fps">FPS</button>
+    <button class="kategori-btn" data-kategori="rpg">RPG</button>
+    <button class="kategori-btn" data-kategori="casual">Casual</button>
+  </div>
+</section>
+
+<!-- CAROUSEL -->
+<section class="carousel-section">
+  <h2>Game Populer</h2>
+  <div class="carousel-wrapper">
+    <button class="carousel-nav left" onclick="scrollCarousel('left')">&#10094;</button>
+    <div class="carousel" id="gameCarousel">
+      <div class="carousel-item"><img src="https://placehold.co/600x400?text=MLBB" alt="MLBB"><h4>MLBB</h4></div>
+      <div class="carousel-item"><img src="https://placehold.co/600x400?text=Valorant" alt="Valorant"><h4>Valorant</h4></div>
+      <div class="carousel-item"><img src="https://placehold.co/600x400?text=Genshin" alt="Genshin"><h4>Genshin</h4></div>
+      <div class="carousel-item"><img src="https://placehold.co/600x400?text=Free+Fire" alt="Free Fire"><h4>Free Fire</h4></div>
+      <div class="carousel-item"><img src="https://placehold.co/600x400?text=PUBG" alt="PUBG"><h4>PUBG</h4></div>
     </div>
-  </section>
+    <button class="carousel-nav right" onclick="scrollCarousel('right')">&#10095;</button>
+  </div>
+</section>
 
-  <section id="games" class="section">
-    <h3 class="section-title">Game Populer</h3>
-    <div class="game-grid">
-      <div class="game-card">
-        <img src="https://via.placeholder.com/300x160?text=Mobile+Legends" alt="MLBB">
-        <h4>Mobile Legends</h4>
-        <p>Diamond cepat masuk tanpa login!</p>
-        <a href="#" class="btn small">Top Up</a>
+<!-- GAME GRID -->
+<section id="games" class="games-section">
+  <h2>Daftar Game</h2>
+  <div class="games-grid" id="gameList">
+    <div class="game-card" data-kategori="moba">
+        <img src="https://placehold.co/600x400?text=Mobile+Legends" alt="Mobile Legends">
+        <div class="game-info">
+          <h3>Mobile Legends</h3>
+          <p>Game MOBA 5v5 paling populer di Asia Tenggara.</p>
+          <button class="btn">Top Up</button>
+        </div>
       </div>
-      <div class="game-card">
-        <img src="https://via.placeholder.com/300x160?text=Free+Fire" alt="Free Fire">
-        <h4>Free Fire</h4>
-        <p>Garansi transaksi sukses 100%.</p>
-        <a href="#" class="btn small">Top Up</a>
+
+      <div class="game-card" data-kategori="fps">
+        <img src="https://placehold.co/600x400?text=Valorant" alt="Valorant">
+        <div class="game-info">
+          <h3>Valorant</h3>
+          <p>FPS kompetitif dengan karakter unik dan kemampuan spesial.</p>
+          <button class="btn">Top Up</button>
+        </div>
       </div>
-      <div class="game-card">
-        <img src="https://via.placeholder.com/300x160?text=PUBG+Mobile" alt="PUBG">
-        <h4>PUBG Mobile</h4>
-        <p>Langsung masuk ke akun kamu!</p>
-        <a href="#" class="btn small">Top Up</a>
+
+      <div class="game-card" data-kategori="rpg">
+        <img src="https://placehold.co/600x400?text=Genshin+Impact" alt="Genshin Impact">
+        <div class="game-info">
+          <h3>Genshin Impact</h3>
+          <p>Petualangan RPG dunia terbuka dengan grafis memukau.</p>
+          <button class="btn">Top Up</button>
+        </div>
       </div>
-      <div class="game-card">
-        <img src="https://via.placeholder.com/300x160?text=Genshin+Impact" alt="Genshin">
-        <h4>Genshin Impact</h4>
-        <p>Crystals & Genesis langsung terkirim.</p>
-        <a href="#" class="btn small">Top Up</a>
+
+      <div class="game-card" data-kategori="casual">
+        <img src="https://placehold.co/600x400?text=Free+Fire" alt="Free Fire">
+        <div class="game-info">
+          <h3>Free Fire</h3>
+          <p>Battle royale cepat dan ringan untuk semua perangkat.</p>
+          <button class="btn">Top Up</button>
+        </div>
       </div>
+
+      <div class="game-card" data-kategori="fps">
+        <img src="https://placehold.co/600x400?text=PUBG+Mobile" alt="PUBG Mobile">
+        <div class="game-info">
+          <h3>PUBG Mobile</h3>
+          <p>Pengalaman pertempuran realistis dengan peta luas.</p>
+          <button class="btn">Top Up</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-kategori="fps">
+        <img src="https://placehold.co/600x400?text=COD+Mobile" alt="CODM">
+        <div class="game-info">
+          <h3>Call of Duty Mobile</h3>
+          <p>FPS dengan mode klasik dan battle royale seru.</p>
+          <button class="btn">Top Up</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-kategori="rpg">
+        <img src="https://placehold.co/600x400?text=Honkai+Star+Rail" alt="HSR">
+        <div class="game-info">
+          <h3>Honkai Star Rail</h3>
+          <p>Strategi turn-based dengan karakter anime menawan.</p>
+          <button class="btn">Top Up</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-kategori="casual">
+        <img src="https://placehold.co/600x400?text=Clash+of+Clans" alt="Clash of Clans">
+        <div class="game-info">
+          <h3>Clash of Clans</h3>
+          <p>Bangun desa, latih pasukan, dan serang musuh!</p>
+          <button class="btn">Top Up</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-kategori="casual">
+        <img src="https://placehold.co/600x400?text=Clash+Royale" alt="Clash Royale">
+        <div class="game-info">
+          <h3>Clash Royale</h3>
+          <p>Gabungan strategi real-time dan koleksi kartu.</p>
+          <button class="btn">Top Up</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-kategori="fps">
+        <img src="https://placehold.co/600x400?text=Apex+Legends+Mobile" alt="Apex Legends">
+        <div class="game-info">
+          <h3>Apex Legends Mobile</h3>
+          <p>Battle royale futuristik dengan kemampuan heroik.</p>
+          <button class="btn">Top Up</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-kategori="rpg">
+        <img src="https://placehold.co/600x400?text=Tower+of+Fantasy" alt="Tower of Fantasy">
+        <div class="game-info">
+          <h3>Tower of Fantasy</h3>
+          <p>RPG sci-fi open world dengan aksi cepat dan PvP.</p>
+          <button class="btn">Top Up</button>
+        </div>
+      </div>
+
+      <div class="game-card" data-kategori="moba">
+        <img src="https://placehold.co/600x400?text=Arena+of+Valor" alt="AOV">
+        <div class="game-info">
+          <h3>Arena of Valor</h3>
+          <p>MOBA cepat dan kompetitif untuk semua kalangan.</p>
+          <button class="btn">Top Up</button>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- TESTIMONI -->
+<section id="review" class="review-section">
+  <h2>Apa Kata Mereka</h2>
+  <div class="review-slider" id="reviewSlider">
+    <div class="review-card">
+      <p>"Top up lancar banget, cuma 1 menit langsung masuk!"</p>
+      <strong>- Riko, Jakarta</strong>
     </div>
-  </section>
-
-  <section id="testi" class="section testi">
-    <h3 class="section-title">Apa Kata Mereka</h3>
-    <div class="testi-grid">
-      <div class="testi-card">
-        <p>"TopUpPro selalu cepat dan responsif! Top up ML cuma butuh 1 menit."</p>
-        <strong>- Budi, Surabaya</strong>
-      </div>
-      <div class="testi-card">
-        <p>"Favorit banget buat top up FF. Harganya paling murah dan proses lancar."</p>
-        <strong>- Ayu, Jakarta</strong>
-      </div>
-      <div class="testi-card">
-        <p>"Suka banget fitur user friendly-nya. UI-nya juga keren banget."</p>
-        <strong>- Dimas, Bandung</strong>
-      </div>
+    <div class="review-card">
+      <p>"Langganan disini karena murah, cepet, dan CS-nya responsif."</p>
+      <strong>- Nita, Surabaya</strong>
     </div>
-  </section>
-
-  <section id="faq" class="section faq">
-    <h3 class="section-title">Pertanyaan Umum</h3>
-    <div class="accordion">
-      <div class="accordion-item">
-        <button class="accordion-header">Apakah proses top up instan?</button>
-        <div class="accordion-body">Ya! Sebagian besar top up masuk dalam hitungan detik hingga 2 menit.</div>
-      </div>
-      <div class="accordion-item">
-        <button class="accordion-header">Apakah aman?</button>
-        <div class="accordion-body">Kami menggunakan gateway pembayaran resmi dan tidak menyimpan data pribadi.</div>
-      </div>
-      <div class="accordion-item">
-        <button class="accordion-header">Metode pembayaran apa saja?</button>
-        <div class="accordion-body">Kami menerima QRIS, E-wallet (DANA, OVO), dan transfer bank.</div>
-      </div>
+    <div class="review-card">
+      <p>"Tampilan website keren, gampang dipakai buat semua game."</p>
+      <strong>- Ubay, Bandung</strong>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer id="contact">
-    <div class="footer-content">
-      <div>
-        <h4>Tentang Kami</h4>
-        <p>TopUpPro adalah platform top up game terpercaya di Indonesia sejak 2020.</p>
-      </div>
-      <div>
-        <h4>Hubungi Kami</h4>
-        <p>Email: support@topuppro.id<br>WA: 0812-3456-7890</p>
-      </div>
-      <div>
-        <h4>Ikuti Kami</h4>
-        <p>
-          <a href="#">Instagram</a> |
-          <a href="#">Facebook</a> |
-          <a href="#">YouTube</a>
-        </p>
-      </div>
+<!-- FAQ -->
+<section id="faq" class="faq-section">
+  <h2>Pertanyaan Umum</h2>
+  <div class="accordion">
+    <div class="accordion-item">
+      <button class="accordion-header">Apakah TopUpPro aman?</button>
+      <div class="accordion-body">Kami menggunakan sistem pembayaran resmi dan data terenkripsi.</div>
     </div>
-    <p class="footer-copy">&copy; 2025 TopUpPro. All Rights Reserved.</p>
-  </footer>
+    <div class="accordion-item">
+      <button class="accordion-header">Berapa lama prosesnya?</button>
+      <div class="accordion-body">Biasanya kurang dari 1-3 menit. Instant delivery!</div>
+    </div>
+  </div>
+</section>
 
-  <script>
-    document.getElementById('menu-toggle').onclick = function() {
-      document.getElementById('navbar').classList.toggle('active');
-    };
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Siap Top Up?</h2>
+  <p>Pilih game favoritmu dan nikmati transaksi tercepat hari ini.</p>
+  <a href="#games" class="btn">Top Up Sekarang</a>
+</section>
 
-    const accordions = document.querySelectorAll(".accordion-header");
-    accordions.forEach(header => {
-      header.onclick = () => {
-        header.classList.toggle("open");
-        const body = header.nextElementSibling;
-        body.style.display = body.style.display === "block" ? "none" : "block";
-      };
-    });
-  </script>
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <h2>Dapatkan Promo & Diskon Spesial!</h2>
+  <form class="newsletter-form">
+    <input type="email" placeholder="Masukkan email kamu..." required>
+    <button type="submit">Langganan</button>
+  </form>
+</section>
 
+<!-- FOOTER -->
+<footer id="kontak">
+  <div class="footer-content">
+    <div>
+      <h4>TopUpPro</h4>
+      <p>Platform top up terpercaya sejak 2020. Mudah, cepat, dan aman.</p>
+    </div>
+    <div>
+      <h4>Kontak</h4>
+      <p>Email: support@topuppro.id<br>WhatsApp: 0812-3456-7890</p>
+    </div>
+    <div>
+      <h4>Sosial Media</h4>
+      <p><a href="#">Instagram</a> • <a href="#">YouTube</a> • <a href="#">Facebook</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 TopUpPro. Semua hak dilindungi.
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
